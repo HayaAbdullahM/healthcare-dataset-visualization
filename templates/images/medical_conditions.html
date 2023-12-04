@@ -1,0 +1,31 @@
+<div class="col-span-2">
+    <h1 class="text-center">Medical Conditions</h1>
+    <canvas id="medical_conditions" class="w-12">
+
+    </canvas>
+</div>
+
+
+{% block scripts %}
+<script type="text/javascript">
+
+
+
+    const { medical_conditions } = data
+    new Chart(document.getElementById("medical_conditions"), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(medical_conditions),
+            datasets: [{
+                label: '',
+                backgroundColor: primaryColors,
+                data: Object.values(medical_conditions)
+            }]
+        },
+    });
+
+
+
+</script>
+
+{% endblock %}

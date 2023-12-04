@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>💪</text></svg>">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class='bg-slate-100 min-h-screen '>
+
+    <nav class="p-4 bg-[#012A4A] w-full ">
+        <div class=" max-w-6xl mx-auto flex items-center justify-between">
+            <a href="{{ url_for('index') }}" class="text-2xl font-extrabold text-white">DM.</a>
+            <div class="flex items-center justify-center">
+                <a href="{{ url_for('index') }}" class="text-white hover:text-slate-300">Dashboard</a>
+                <a href="{{ url_for('about') }}" class="text-white hover:text-slate-300 ml-4">About</a>
+                <a href="{{ url_for('students') }}" class="text-white hover:text-slate-300 ml-4">Students</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="py-24 max-w-7xl mx-auto ">
+
+        {% block scripts %}
+        <script type="text/javascript">
+            AOS.init();
+            const data = JSON.parse(`{{data|safe}}`)
+            const primaryColors = ["#013A63", "#01497C", "#014F86", "#013A63", "#2A6F97", "#2C7DA0", "#61A5C2", "#89C2D9"];
+
+        </script>
+
+        {% endblock %}

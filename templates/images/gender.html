@@ -1,0 +1,36 @@
+<div class="col-span-1">
+    <h1 class="text-center">Genders</h1>
+    <canvas id="gender" class="">
+
+    </canvas>
+</div>
+
+
+{% block scripts %}
+<script type="text/javascript">
+
+
+
+    const { genders } = data
+    const { Male: male, Female: female } = genders
+
+    new Chart(document.getElementById("gender"), {
+        type: 'pie',
+        data: {
+            labels: ['Male', 'Female'],
+            datasets: [{
+                label: "Person",
+                backgroundColor: ["#013A63", "#468FAF",],
+                data: [
+                    male, female
+                ]
+            }]
+        },
+
+    });
+
+
+
+</script>
+
+{% endblock %}

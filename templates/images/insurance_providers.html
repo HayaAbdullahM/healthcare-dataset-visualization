@@ -1,0 +1,31 @@
+<div class="col-span-2">
+    <h1 class="text-center">Insurance Provider</h1>
+    <canvas id="insurance_providers" class="w-12">
+
+    </canvas>
+</div>
+
+
+{% block scripts %}
+<script type="text/javascript">
+
+
+
+    const { insurance_providers } = data
+    new Chart(document.getElementById("insurance_providers"), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(insurance_providers),
+            datasets: [{
+                label: '',
+                backgroundColor: primaryColors,
+                data: Object.values(insurance_providers)
+            }]
+        },
+    });
+
+
+
+</script>
+
+{% endblock %}

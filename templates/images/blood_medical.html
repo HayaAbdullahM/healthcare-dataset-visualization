@@ -1,0 +1,31 @@
+<div class="col-span-3">
+    <h1 class="text-center">Blood Type - Medical Condition</h1>
+    <canvas id="blood_medical" class="w-12">
+
+    </canvas>
+</div>
+
+
+{% block scripts %}
+<script type="text/javascript">
+
+    const { blood_medical } = data
+    console.log(blood_medical)
+    const bloodTypes = Object.keys(blood_medical[Object.keys(blood_medical)[0]]);
+
+    new Chart(document.getElementById("blood_medical"), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(blood_medical),
+            datasets: bloodTypes.map((bloodType, index) => ({
+                label: bloodType,
+                backgroundColor: primaryColors[index],
+                data: Object.keys(blood_medical).map(condition => blood_medical[condition][bloodType])
+            }))
+        },
+    });
+
+
+</script>
+
+{% endblock %}

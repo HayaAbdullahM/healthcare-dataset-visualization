@@ -1,0 +1,59 @@
+{% include 'header.html' %}
+
+<h1 class="text-2xl lg:text-4xl " data-aos="fade-up" data-aos-delay="100">About Dataset 📚</h1>
+
+<h2 class="text-lg lg:text-2xl mt-4" data-aos="fade-up" data-aos-delay="150">Summary 👩‍🏫</h2>
+<p data-aos="fade-up" data-aos-delay="200">
+    This synthetic healthcare dataset has been created to serve as a valuable resource for data science, machine
+    learning, and data analysis enthusiasts. It is designed to mimic real-world healthcare data, enabling users to
+    practice, develop, and showcase their data manipulation and analysis skills in the context of the healthcare
+    industry.
+</p>
+
+
+<h2 class="text-lg lg:text-2xl mt-4" data-aos="fade-up" data-aos-delay="250">Data Content 📊</h2>
+
+<ul class="list-disc list-inside" data-aos="fade-up" data-aos-delay="350">
+    <li>Name: This column represents the name of the patient associated with the healthcare record.</li>
+    <li>Age: The age of the patient at the time of admission, expressed in years.</li>
+    <li>Gender: Indicates the gender of the patient, either "Male" or "Female."</li>
+    <li>Blood Type: The patient's blood type, which can be one of the common blood types (e.g., "A+", "O-", etc.).</li>
+    <li>Medical Condition: This column specifies the primary medical condition or diagnosis associated with the patient,
+        such as "Diabetes," "Hypertension," "Asthma," and more.</li>
+    <li>Date of Admission: The date on which the patient was admitted to the healthcare facility.</li>
+    <li>Doctor: The name of the doctor responsible for the patient's care during their admission.</li>
+    <li>Hospital: Identifies the healthcare facility or hospital where the patient was admitted.</li>
+    <li>Insurance Provider: This column indicates the patient's insurance provider, which can be one of several options,
+        including "Aetna," "Blue Cross," "Cigna," "UnitedHealthcare," and "Medicare."</li>
+    <li>Billing Amount: The amount of money billed for the patient's healthcare services during their admission. This is
+        expressed as a floating-point number.</li>
+    <li>Room Number: The room number where the patient was accommodated during their admission.</li>
+    <li>Admission Type: Specifies the type of admission, which can be "Emergency," "Elective," or "Urgent," reflecting
+        the circumstances of the admission.</li>
+    <li>Discharge Date: The date on which the patient was discharged from the healthcare facility, based on the
+        admission date and a * random number of days within a realistic range.
+        Medication: Identifies a medication prescribed or administered to the patient during their admission. Examples
+        include "Aspirin," "Ibuprofen," "Penicillin," "Paracetamol," and "Lipitor."</li>
+    <li>Test Results: Describes the results of a medical test conducted during the patient's admission. Possible values
+        include "Normal," "Abnormal," or "Inconclusive," indicating the outcome of the test.* </li>
+</ul>
+
+
+<div class="flex justify-between flex-col lg:flex-row w-full items-center text-center">
+    <div class="w-1/2" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="text-lg lg:text-2xl mt-4">Data Source 📝</h2>
+        <p>
+            This dataset was found on kaggle, you can access it from <a href="https://www.kaggle.com/datasets/prasad22/healthcare-dataset" class="text-blue-500">here</a>.
+        </p>
+    </div>
+    <div class="w-1/2" data-aos="fade-up" data-aos-delay="600">
+        <h2 class="text-lg lg:text-2xl mt-4">Source Code ☁️</h2>
+        <p>
+            Find more about the project and the source code in github or click <a href="https://github.com/HayaAbdullahM/healthcare-dataset-visualization.git" class="text-blue-500">here</a>
+        </p>
+    </div>
+</div>
+
+
+
+{% include 'footer.html' %}

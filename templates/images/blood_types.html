@@ -1,0 +1,31 @@
+<div class="col-span-1">
+    <h1 class="text-center">Blood Types</h1>
+    <canvas id="blood_types" class="w-12">
+
+    </canvas>
+</div>
+
+
+{% block scripts %}
+<script type="text/javascript">
+
+
+
+    const { blood_types } = data
+    new Chart(document.getElementById("blood_types"), {
+        type: 'doughnut',
+        data: {
+            labels: Object.keys(blood_types),
+            datasets: [{
+                label: '',
+                backgroundColor: primaryColors,
+                data: Object.values(blood_types)
+            }]
+        },
+    });
+
+
+
+</script>
+
+{% endblock %}
